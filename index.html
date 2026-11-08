@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset=utf8>
+<meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Üç Yıl</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,600;0,800;1,500&family=Cinzel:wght@600&family=IBM+Plex+Mono:wght@500&family=Public+Sans:wght@400;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div>
+        <h1>Üç Yıl</h1>
+        <p class="sub">Her dönem üç yıl sürer. Devleti ayakta tut.</p>
+      </div>
+      <button type="button" class="chips" id="chips" data-act="statsToggle" hidden></button>
+      <div class="status" id="status"></div>
+    </header>
+    <div id="intro" role="dialog" aria-label="Başlangıç ekranı"></div>
+    <div class="layout">
+      <div class="left">
+        <div class="mapwrap"><svg id="map" viewBox="0 0 600 420" role="img" aria-label="Ortaçağ haritası: dokuz devlet"></svg><button type="button" class="mtog" id="mtog" data-act="mapOnly" hidden></button><button type="button" class="mtog" id="atog" data-act="allyMap" style="right:auto;left:10px" hidden></button></div>
+        <section class="panel" id="stats" aria-label="Devletin durumu" hidden></section>
+      </div>
+      <aside class="panel" id="panel"></aside>
+    </div>
+    <footer class="hud" id="hud">
+      <span><kbd>Boşluk</kbd>dönemi bitir (onaylı)</span><span class="sep">·</span>
+      <span><kbd>Esc</kbd>geri / kapat</span><span class="sep">·</span>
+      <span><kbd>Sağ tık</kbd>seçimi bırak</span><span class="sep">·</span>
+      <span><kbd>Çift tık</kbd>kaleye gir</span><span class="sep">·</span>
+      <span><kbd>M</kbd>sadece harita</span><span class="sep">·</span>
+      <span><kbd>A</kbd>ittifak haritası</span><span class="sep">·</span>
+      <span><kbd>S</kbd>durum</span><span class="sep">·</span>
+      <span><kbd>T</kbd>sekmeyi değiştir</span><span class="sep">·</span>
+      <span><kbd>1-9</kbd>bölge</span><span class="sep">·</span>
+      <span><kbd>E</kbd>başkente gir</span><span class="sep">·</span>
+      <span><kbd>H</kbd>menü</span><span class="sep">·</span>
+      <span><kbd>F</kbd>tam ekran</span>
+    </footer>
+  </div>
+  <div class="tipbox" id="tip" hidden></div>
+
+<!-- Yüklenme sırası önemlidir: data -> rules -> map -> ui -> app -> pc -->
+<script src="js/data.js"></script>
+<script src="js/rules.js"></script>
+<script src="js/map.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/app.js"></script>
+<script src="js/pc.js"></script>
+</body>
+</html>
